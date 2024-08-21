@@ -105,3 +105,10 @@ export function clearCart(): Record<string, number> {
 //   // Activity 1 code here
 //   return 0;
 // }
+
+export function applyShippingDiscount(total: number) {
+  if (total <= 500) {
+    return total;
+  }
+  return total - 10;
+}
